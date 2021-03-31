@@ -3,9 +3,7 @@ extern crate cc;
 fn main(){
     cc::Build::new()
         .file("src/cnt_store.c")
-        .compile("cnt_store.a");
-    println!("cargo:rustc-link-lib=cnt_sotre");
-    println!("cargo:rustc-link-search=/home/yanjuguang/PMDK_development/array_store/store_cnt/src");
+        .compile("libcnt_store.a");
 }
 
 // fn main(){

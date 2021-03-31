@@ -7,9 +7,10 @@ use libc::c_char;
 // use std::ffi::CString;
 
 pub enum PMEMobjpool {}
-*mut PMEMobjpool pop;
+// *mut PMEMobjpool pop;
 
 #[link(name = "cnt_store")]
+#[link(name = "pmemobj")]
 extern "C"{
     fn create_content(pop: *mut PMEMobjpool, size: size_t, buf: *mut c_char, id: c_int)->c_int;
     fn print_content(pop: *mut PMEMobjpool, id: c_int)->c_void;
